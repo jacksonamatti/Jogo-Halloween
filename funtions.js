@@ -1,13 +1,13 @@
-const mario = document.querySelector(".mario");
+const personagem = document.querySelector(".personagem");
 const pipe = document.querySelector(".pipe");
-const nuvens = document.querySelector(".nuvens");
+const morcegos = document.querySelector(".morcegos");
 const gameBoard = document.querySelector(".game-board");
 
 const jump = () => {
-  mario.classList.add('jump')
+  personagem.classList.add('jump')
 
   setTimeout(() => {
-    mario.classList.remove('jump')
+    personagem.classList.remove('jump')
   }, 500);
 }
 
@@ -16,19 +16,19 @@ const loop = setInterval(() => {
 
     console.log('loop')
     const pipePosition = pipe.offsetLeft;
-    const marioPosition = +window.getComputedStyle(mario).bottom.replace('px',"");
+    const morcegoPosition = +window.getComputedStyle(personagem).bottom.replace('px',"");
 
 
-    if(pipePosition <= 100  && pipePosition > 0 && marioPosition < 80){
+    if(pipePosition <= 100  && pipePosition > 0 && morcegoPosition < 80){
         pipe.style.animation = 'none';
         pipe.style.left = `${pipePosition}px`;  
 
-        mario.style.animation = 'none';
-        mario.style.bottom = `${marioPosition}px`;
+        personagem.style.animation = 'none';
+        personagem.style.bottom = `${morcegoPosition}px`;
 
-        mario.style.width = '200px';
-        mario.style.marginLeft = '30px';
-        nuvens.style.animation = 'none';
+        personagem.style.width = '200px';
+        personagem.style.marginLeft = '30px';
+        morcegos.style.animation = 'none';
        
 
 

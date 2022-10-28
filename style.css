@@ -32,7 +32,7 @@ body{
 }
 
 
-.mario{
+.personagem{
    width: 200px;
    position: absolute;
    bottom: -30px;
@@ -43,7 +43,7 @@ body{
     animation: jump 500ms ease-out ;
 }
 
-.nuvens{
+.morcego{
     width: 550px;
     position:absolute;
     animation: nuvens-img  10s infinite linear;
